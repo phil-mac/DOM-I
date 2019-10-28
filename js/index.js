@@ -9,7 +9,7 @@ const siteContent = {
     "img-src": "img/logo.png"
   },
   "cta": {
-    "h1": "DOM Is Awesome",
+    "h1": "DOM <br>Is <br>Awesome",
     "button": "Get Started",
     "img-src": "img/header-img.png"
   },
@@ -28,7 +28,7 @@ const siteContent = {
   },
   "contact": {
     "contact-h4" : "Contact",
-    "address" : "123 Way 456 Street Somewhere, USA",
+    "address" : "123 Way 456 Street <br>Somewhere, USA",
     "phone" : "1 (888) 888-8888",
     "email" : "sales@greatidea.io",
   },
@@ -50,7 +50,7 @@ document.querySelector('nav a:nth-child(4)').textContent = siteContent['nav']['n
 document.querySelector('nav a:nth-child(5)').textContent = siteContent['nav']['nav-item-5'];
 document.querySelector('nav a:nth-child(6)').textContent = siteContent['nav']['nav-item-6'];
 
-document.querySelector('.cta .cta-text h1').textContent = siteContent['cta']['h1'];
+document.querySelector('.cta .cta-text h1').innerHTML = siteContent['cta']['h1'];
 document.querySelector('.cta .cta-text button').textContent = siteContent['cta']['button'];
 document.querySelector('#cta-img').src = siteContent['cta']['img-src'];
 
@@ -69,7 +69,7 @@ document.querySelector('.main-content .bottom-content .text-content:nth-child(3)
 document.querySelector('.main-content .bottom-content .text-content:nth-child(3) p').textContent = siteContent['main-content']['vision-content'];
 
 document.querySelector('.contact h4').textContent = siteContent['contact']['contact-h4'];
-document.querySelector('.contact p:nth-child(2)').textContent = siteContent['contact']['address'];
+document.querySelector('.contact p:nth-child(2)').innerHTML = siteContent['contact']['address'];
 document.querySelector('.contact p:nth-child(3)').textContent = siteContent['contact']['phone'];
 document.querySelector('.contact p:nth-child(4)').textContent = siteContent['contact']['email'];
 
@@ -88,3 +88,27 @@ nav.appendChild(jobsLink);
 
 const navLinks = document.querySelectorAll('nav a');
 navLinks.forEach(link => link.style.color = 'green');
+
+
+
+// Stretch
+
+const button = document.querySelector('.cta .cta-text button');
+button.style.background = 'lightgreen';
+button.style.color = 'white';
+button.style.width = '12rem';
+button.style.height = '4rem';
+button.style.fontSize = '2rem';
+button.style.borderRadius = '1rem';
+button.style.border = '2px solid black';
+
+button.addEventListener('click', (event) => {
+  event.target.style.background = 'red';
+  event.target.textContent = '... or not';
+  document.querySelector('.cta .cta-text h1').innerHTML = 'the cake <br>is <br>a lie';
+  const subHeadings = document.querySelectorAll('h4');
+  subHeadings.forEach(heading => heading.textContent = 'Great Idea isn\'t a real company')
+});
+
+
+
