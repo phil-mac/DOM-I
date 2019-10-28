@@ -52,14 +52,14 @@ document.querySelector('nav a:nth-child(6)').textContent = siteContent['nav']['n
 
 document.querySelector('.cta .cta-text h1').innerHTML = siteContent['cta']['h1'];
 document.querySelector('.cta .cta-text button').textContent = siteContent['cta']['button'];
-document.querySelector('#cta-img').src = siteContent['cta']['img-src'];
+document.getElementById('cta-img').src = siteContent['cta']['img-src'];
 
 document.querySelector('.main-content .top-content .text-content:nth-child(1) h4').textContent = siteContent['main-content']['features-h4'];
 document.querySelector('.main-content .top-content .text-content:nth-child(1) p').textContent = siteContent['main-content']['features-content'];
 document.querySelector('.main-content .top-content .text-content:nth-child(2) h4').textContent = siteContent['main-content']['about-h4'];
 document.querySelector('.main-content .top-content .text-content:nth-child(2) p').textContent = siteContent['main-content']['about-content'];
 
-document.querySelector('#middle-img').src = siteContent['main-content']['middle-img-src'];
+document.getElementById('middle-img').src = siteContent['main-content']['middle-img-src'];
 
 document.querySelector('.main-content .bottom-content .text-content:nth-child(1) h4').textContent = siteContent['main-content']['services-h4'];
 document.querySelector('.main-content .bottom-content .text-content:nth-child(1) p').textContent = siteContent['main-content']['services-content'];
